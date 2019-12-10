@@ -17,7 +17,8 @@ public class Torreta : MonoBehaviour
 
     void Start()
     {
-        InvokeRepeating("ActualiObj", 0, 0.5f); 
+        InvokeRepeating("ActualiObj", 0, 0.5f);
+        Invoke("Destruir", 60);
     }
 
     void ActualiObj()
@@ -44,19 +45,14 @@ public class Torreta : MonoBehaviour
             objetivo = null;
         }
     }
-
-    int tmp = 60;
+    
     void Update()
     {
-        
+
         if (objetivo == null)
         {
             return;
         }
-
-        //Quaternion vistaRotacion = Quaternion.LookRotation(objetivo.position, transform.position);
-        //Vector3 rotacion = Quaternion.Lerp(partRota.rotation, vistaRotacion, Time.deltaTime * 10).eulerAngles;
-        //partRota.rotation = Quaternion.Euler(rotacion.x, rotacion.y, 0);
 
         partRota.transform.LookAt(objetivo);
 
@@ -68,12 +64,12 @@ public class Torreta : MonoBehaviour
         }
         contFuego -= Time.deltaTime;
 
-        if (tmp > 60)
-        {
-            Destroy(gameObject);
-            //ColocadorTorres.contadorTorres -= 1;
-        }
-        print(tmp);
-        tmp -= (int)Time.deltaTime;
+        
+    }
+
+    void Destruir()
+    {
+        ColocadorTorres.contadorTorres -= 1;
+        Destroy(gameObject);
     }
 }

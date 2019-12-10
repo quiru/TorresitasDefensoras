@@ -226,6 +226,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4924783946067484}
+  - component: {fileID: 324710179353536286}
   m_Layer: 0
   m_Name: FattyMortarG02
   m_TagString: Untagged
@@ -249,6 +250,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &324710179353536286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1591110490357510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07f7dd204af0e8a49b9e759a626b884f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objetivo: {fileID: 0}
+  partRota: {fileID: 4459613001278838}
+  bala: {fileID: 1627521441993660, guid: 12ea0a574b594264685afffd52fff036, type: 3}
+  disparador: {fileID: 4411725851834284}
+  humo: {fileID: 198352920909028448}
 --- !u!1 &1658705116820196
 GameObject:
   m_ObjectHideFlags: 0
