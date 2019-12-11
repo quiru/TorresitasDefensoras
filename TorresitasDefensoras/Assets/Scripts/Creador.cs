@@ -10,16 +10,24 @@ public class Creador : MonoBehaviour
     float tiempoSalida = 6;
     float contador = 2;
     int numEnemigos = 0;
+    public static int contEnemigos = 0;
     
     void Update()
     {
-        if (contador <= 0)
+        if (contEnemigos < 5)
         {
-            StartCoroutine("CreaIntervalo");
-            contador = tiempoSalida;
-        }
+            if (contador <= 0)
+            {
+                StartCoroutine("CreaIntervalo");
+                contador = tiempoSalida;
+            }
 
-        contador -= Time.deltaTime;
+            contador -= Time.deltaTime;
+        }
+        else if (contEnemigos >= 5)
+        {
+
+        }
     }
 
     IEnumerator CreaIntervalo()
