@@ -10,14 +10,13 @@ public class Creador2 : MonoBehaviour
     float tiempoSalida = 6;
     float contador = 3;
     int numEnemigos = 0;
-    public static int contEnemigos = 0;
 
     void Update()
     {
-        int contTmp = (int)Time.timeSinceLevelLoad;
-        if (contTmp >= 10)
+        if (Llegada.juego)
         {
-            if (contEnemigos < 5)
+            int contTmp = (int)Time.timeSinceLevelLoad;
+            if (contTmp >= 90)
             {
                 if (contador <= 0)
                 {
@@ -26,10 +25,6 @@ public class Creador2 : MonoBehaviour
                 }
 
                 contador -= Time.deltaTime;
-            }
-            else if (contEnemigos >= 5)
-            {
-
             } 
         }
     }
@@ -37,12 +32,12 @@ public class Creador2 : MonoBehaviour
     IEnumerator CreaIntervalo()
     {
         numEnemigos++;
-        tiempoSalida += 0.3f;
+        tiempoSalida += 1f;
         for (int i = 0; i < numEnemigos; i++)
         {
             instanciador = Instantiate(enemigo, new Vector3(salida.position.x, salida.position.y, salida.position.z), salida.rotation);
             instanciador.name = "enemy";
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(3f);
         }
     }
 }

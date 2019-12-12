@@ -10,12 +10,5 @@ public class bala : MonoBehaviour
         Destroy(gameObject, 2);
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.GetComponent<DestinoNavMesh>())
-        {
-            Destroy(gameObject);
-            Destroy(collision.gameObject);
-        }
-    }
+    
 }

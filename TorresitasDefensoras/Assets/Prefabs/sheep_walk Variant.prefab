@@ -48,6 +48,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy0: {fileID: 6832404864180592027}
+--- !u!114 &5504216160286137745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6310596114534009056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0c01b440a4e4a24f8fda50c29c12f12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6310596114534043140
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -58,6 +70,10 @@ PrefabInstance:
     - target: {fileID: 100068, guid: b2f29bedc01897d448f4f3e00b5e406d, type: 3}
       propertyPath: m_Name
       value: sheep_walk Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 100068, guid: b2f29bedc01897d448f4f3e00b5e406d, type: 3}
+      propertyPath: m_TagString
+      value: Enemys
       objectReference: {fileID: 0}
     - target: {fileID: 400068, guid: b2f29bedc01897d448f4f3e00b5e406d, type: 3}
       propertyPath: m_LocalPosition.x

@@ -10,11 +10,10 @@ public class Creador : MonoBehaviour
     float tiempoSalida = 6;
     float contador = 2;
     int numEnemigos = 0;
-    public static int contEnemigos = 0;
     
     void Update()
     {
-        if (contEnemigos < 5)
+        if (Llegada.juego)
         {
             if (contador <= 0)
             {
@@ -24,21 +23,17 @@ public class Creador : MonoBehaviour
 
             contador -= Time.deltaTime;
         }
-        else if (contEnemigos >= 5)
-        {
-
-        }
     }
 
     IEnumerator CreaIntervalo()
     {
         numEnemigos++;
-        tiempoSalida += 0.3f;
+        tiempoSalida += 0.5f;
         for (int i = 0; i < numEnemigos; i++)
         {
             instanciador = Instantiate(enemigo, salida.position, salida.rotation);
             instanciador.name = "enemy";
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(1.5f);
         }
     }
 }

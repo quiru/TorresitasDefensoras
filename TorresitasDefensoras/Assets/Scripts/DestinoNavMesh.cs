@@ -11,19 +11,4 @@ public class DestinoNavMesh : MonoBehaviour
     {
         enemy0.destination = GameObject.Find("Floor01 (133)").transform.position;
     }
-
-
-    void Update()
-    {
-
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.transform.name == "Llegada")
-        {
-            Creador.contEnemigos += 1;
-            Destroy(gameObject);
-        }
-    }
 }
